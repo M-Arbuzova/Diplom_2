@@ -2,9 +2,12 @@ package user;
 
 import client.BurgerSpec;
 import client.Endpoints;
+import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_ACCEPTED;
+import static org.hamcrest.CoreMatchers.is;
 
 public class UserApi extends Endpoints {
     public ValidatableResponse userReg(User user) {
@@ -30,24 +33,28 @@ public class UserApi extends Endpoints {
                 .spec(BurgerSpec.requestSpecification())
                 .headers("Authorization", bearerToken)
                 .delete(Endpoints.DELETE_USER_API)
-                .then();
+                .then()
+                .statusCode(SC_ACCEPTED)
+                .and().body("message", is("User successfully removed")).log().all();
     }
 
-    public ValidatableResponse updateDataUserWithAuth(User user, String bearerToken){
+    public ValidatableResponse updateDataUserWithAuth(UserNewData userNewData, String bearerToken){
         return given()
                 .spec(BurgerSpec.requestSpecification())
                 .header("Authorization", bearerToken)
-                .body(user)
+                .contentType(ContentType.JSON)
                 .and()
-                .patch(Endpoints.USER_PATH_API + "user")
+                .body(userNewData)
+                .when()
+                .patch(Endpoints.PATCH_USER_API)
                 .then();
     }
-    public ValidatableResponse updateDataUserWithoutAuth(String bearerToken){
+    public ValidatableResponse updateDataUserWithoutAuth(UserNewData userNewData){
         return given()
                 .spec(BurgerSpec.requestSpecification())
-                .auth().oauth2(bearerToken)
                 .and()
-                .patch(Endpoints.USER_PATH_API + "user")
+                .body(userNewData)
+                .patch(Endpoints.PATCH_USER_API)
                 .then();
     }
 }

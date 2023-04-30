@@ -9,7 +9,8 @@ public class UserGenerateData extends User{
         String name = RandomStringUtils.randomAlphabetic(9);
         return new User(email, password, name);
     }
-    public User getGenericUser(){
-        return new User("ma.arbuzova@mail.ru", "12345678", "Мария");
+    public UserNewData random() {
+        return new UserNewData(RandomStringUtils.randomAlphabetic(9) + "@bk.ru", RandomStringUtils.randomAlphabetic(9));
+
     }
 }

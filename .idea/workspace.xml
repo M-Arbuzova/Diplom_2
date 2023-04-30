@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aca5bbb-7e7e-4f05-8cdb-3acf2dca9376" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1aca5bbb-7e7e-4f05-8cdb-3acf2dca9376" name="Changes" comment="Add LoginUserTest and readme">
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/UserNewData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UpdateUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Endpoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/UserGenerateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/UserGenerateData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,16 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/QA-java-diplom-2-develop2",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.LoginUserTest">
+}]]></component>
+  <component name="RunManager" selected="JUnit.UpdateUserTest.updateUserWithoutAuthTest">
+    <configuration name="CreateUserTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="CreateUserTest" />
+        <pattern testClass="LoginUserTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
@@ -66,40 +81,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateUserTest.createUserDuplicateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateUserTest" />
-      <option name="METHOD_NAME" value="createUserDuplicateTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateUserTest.createUserWithoutEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateUserTest" />
-      <option name="METHOD_NAME" value="createUserWithoutEmailTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
+      <option name="MAIN_CLASS_NAME" value="UpdateUserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest.loginUserWithWrongEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUserTest.updateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginUserTest" />
-      <option name="METHOD_NAME" value="loginUserWithWrongEmailTest" />
+      <option name="MAIN_CLASS_NAME" value="UpdateUserTest" />
+      <option name="METHOD_NAME" value="updateUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateUserTest.updateUserWithoutAuthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UpdateUserTest" />
+      <option name="METHOD_NAME" value="updateUserWithoutAuthTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginUserTest" />
-        <item itemvalue="JUnit.LoginUserTest.loginUserWithWrongEmailTest" />
+        <item itemvalue="JUnit.UpdateUserTest.updateUserWithoutAuthTest" />
+        <item itemvalue="JUnit.UpdateUserTest.updateUserTest" />
+        <item itemvalue="JUnit.UpdateUserTest" />
         <item itemvalue="JUnit.CreateUserTest" />
-        <item itemvalue="JUnit.CreateUserTest.createUserWithoutEmailTest" />
-        <item itemvalue="JUnit.CreateUserTest.createUserDuplicateTest" />
+        <item itemvalue="JUnit.CreateUserTest and 1 more" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +129,18 @@
       <option name="presentableId" value="Default" />
       <updated>1682790677311</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add LoginUserTest and readme">
+      <created>1682875807322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682875807322</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add LoginUserTest and readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add LoginUserTest and readme" />
   </component>
 </project>

@@ -25,8 +25,7 @@ public class LoginUserTest {
     @After
     public void tearDown() {
         if (bearerToken != null) {
-            userApi.deleteUser(bearerToken).statusCode(SC_ACCEPTED)
-                    .and().body("message", is("User successfully removed")).log().all();
+            userApi.deleteUser(bearerToken);
         }
     }
         @Test
