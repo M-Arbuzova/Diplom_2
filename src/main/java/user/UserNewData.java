@@ -1,5 +1,7 @@
 package user;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class UserNewData {
     private String email;
     private String password;
@@ -30,11 +32,18 @@ public class UserNewData {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public UserNewData random() {
+        return new UserNewData(RandomStringUtils.randomAlphabetic(9) + "@bk.ru",
+                RandomStringUtils.randomAlphabetic(9), RandomStringUtils.randomAlphabetic(9));
+
     }
 }

@@ -1,7 +1,5 @@
 package orders;
 
-import io.restassured.response.ValidatableResponse;
-
 import java.util.ArrayList;
 import java.util.List;
 

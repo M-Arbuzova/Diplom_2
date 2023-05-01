@@ -10,16 +10,6 @@ import static org.apache.http.HttpStatus.SC_ACCEPTED;
 import static org.hamcrest.CoreMatchers.is;
 
 public class UserApi extends Endpoints {
-    public ValidatableResponse userReg(User user) {
-        return given()
-                .spec(BurgerSpec.requestSpecification())
-                .and()
-                .body(user)
-                .when()
-                .post(Endpoints.CREATE_USER_API)
-                .then();
-    }
-
     public static ValidatableResponse userLogin(User user) {
         return given()
                 .spec(BurgerSpec.requestSpecification())
@@ -27,6 +17,16 @@ public class UserApi extends Endpoints {
                 .body(user)
                 .when()
                 .post(Endpoints.LOGIN_API)
+                .then();
+    }
+
+    public ValidatableResponse userReg(User user) {
+        return given()
+                .spec(BurgerSpec.requestSpecification())
+                .and()
+                .body(user)
+                .when()
+                .post(Endpoints.CREATE_USER_API)
                 .then();
     }
 
