@@ -1,3 +1,5 @@
+package user;
+
 import client.BurgerSpec;
 import client.Endpoints;
 import io.qameta.allure.Description;
@@ -31,10 +33,11 @@ public class UpdateUserTest {
     }
     @After
     public void tearDown() {
-        if (bearerToken != null) {
-            userApi.deleteUser(bearerToken);
-        }
+        if (bearerToken == null) return;
+        userApi.deleteUser(bearerToken);
     }
+    //смущает, что в тесте ниже получается изменить данные у пользователя, хотя не было входа в систему под его логин
+    //правильно понимаю, что это баг?
     @Test
     @DisplayName("Изменение данных залогиненного пользователя")
     @Description("Проверка, что можно изменить данные, когда пользователь залогинен")

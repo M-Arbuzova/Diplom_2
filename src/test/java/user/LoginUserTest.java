@@ -1,3 +1,5 @@
+package user;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -24,9 +26,8 @@ public class LoginUserTest {
     }
     @After
     public void tearDown() {
-        if (bearerToken != null) {
-            userApi.deleteUser(bearerToken);
-        }
+        if (bearerToken == null) return;
+        userApi.deleteUser(bearerToken);
     }
         @Test
         @DisplayName("Логин пользователя с валидными данными")

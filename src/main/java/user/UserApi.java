@@ -19,7 +19,8 @@ public class UserApi extends Endpoints {
                 .post(Endpoints.CREATE_USER_API)
                 .then();
     }
-    public ValidatableResponse userLogin(User user){
+
+    public static ValidatableResponse userLogin(User user) {
         return given()
                 .spec(BurgerSpec.requestSpecification())
                 .and()
@@ -28,17 +29,18 @@ public class UserApi extends Endpoints {
                 .post(Endpoints.LOGIN_API)
                 .then();
     }
-    public ValidatableResponse deleteUser(String bearerToken){
+
+    public ValidatableResponse deleteUser(String bearerToken) {
         return given()
                 .spec(BurgerSpec.requestSpecification())
                 .headers("Authorization", bearerToken)
                 .delete(Endpoints.DELETE_USER_API)
                 .then()
                 .statusCode(SC_ACCEPTED)
-                .and().body("message", is("User successfully removed")).log().all();
+                .and().body("message", is("User successfully removed"));
     }
 
-    public ValidatableResponse updateDataUserWithAuth(UserNewData userNewData, String bearerToken){
+    public ValidatableResponse updateDataUserWithAuth(UserNewData userNewData, String bearerToken) {
         return given()
                 .spec(BurgerSpec.requestSpecification())
                 .header("Authorization", bearerToken)
@@ -49,7 +51,8 @@ public class UserApi extends Endpoints {
                 .patch(Endpoints.PATCH_USER_API)
                 .then();
     }
-    public ValidatableResponse updateDataUserWithoutAuth(UserNewData userNewData){
+
+    public ValidatableResponse updateDataUserWithoutAuth(UserNewData userNewData) {
         return given()
                 .spec(BurgerSpec.requestSpecification())
                 .and()

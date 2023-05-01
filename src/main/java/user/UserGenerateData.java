@@ -10,7 +10,7 @@ public class UserGenerateData extends User{
         return new User(email, password, name);
     }
     public UserNewData random() {
-        return new UserNewData(RandomStringUtils.randomAlphabetic(9) + "@bk.ru", RandomStringUtils.randomAlphabetic(9));
+        return new UserNewData(RandomStringUtils.randomAlphabetic(9) + "@bk.ru", RandomStringUtils.randomAlphabetic(9), RandomStringUtils.randomAlphabetic(9));
 
     }
 }
